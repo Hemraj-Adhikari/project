@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void showHeader() {
+    printf("\n=====================================\n");
+    printf("        HEMRAJ ADHIKARI\n");
+    printf("   BIT Student | IT Enthusiast\n");
+    printf("=====================================\n");
+}
+
+void aboutMe() {
+    printf("\n--- About Me ---\n");
+    printf("I am a BIT student from Nepal.\n");
+    printf("Interested in IT Support, System Admin,\n");
+    printf("Networking, and Web Development.\n");
+}
+
+void skills() {
+    printf("\n--- Skills ---\n");
+    printf("Languages: C, C++, Java, Python, C# (.NET)\n");
+    printf("Web: HTML, CSS, WordPress\n");
+    printf("System: Windows, Linux\n");
+    printf("Networking: Basic LAN/WAN\n");
+}
+
+void projects() {
+    printf("\n--- Projects ---\n");
+    printf("1. Student Management System\n");
+    printf("2. Portfolio Website\n");
+    printf("3. Linux Monitoring Tool\n");
+}
+
+void contact() {
+    printf("\n--- Contact ---\n");
+    printf("Phone: 9865802093\n");
+    printf("Email: hemraj@example.com\n");
+}
+
+void menu() {
+    int choice;
+
+    do {
+        printf("\n========= MENU =========\n");
+        printf("1. About Me\n");
+        printf("2. Skills\n");
+        printf("3. Projects\n");
+        printf("4. Contact\n");
+        printf("5. Exit\n");
+        printf("========================\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch(choice) {
+            case 1: aboutMe(); break;
+            case 2: skills(); break;
+            case 3: projects(); break;
+            case 4: contact(); break;
+            case 5: printf("\nExiting... Thank you!\n"); break;
+            default: printf("\nInvalid choice!\n");
+        }
+
+    } while(choice != 5);
+}
+
+int main() {
+    showHeader();
+    menu();
+    return 0;
+}
