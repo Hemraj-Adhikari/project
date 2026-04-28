@@ -42,7 +42,6 @@ void menu() {
         printf("========================\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
-
         switch(choice) {
             case 1: aboutMe(); break;
             case 2: skills(); break;
